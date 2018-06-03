@@ -1,0 +1,215 @@
+.circle {
+  width: 200px;
+  height: 200px;
+   /* 幅と高さの半分 */
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  background: #C00;
+}
+
+
+/* swing btn */
+.swing {
+    margin:8px;
+    -ms-animation: swing linear 5s infinite;
+    -ms-transform-origin: center -24px 0;
+    animation: swing linear 5s infinite;
+    transform-origin: center -24px 0;
+}
+ 
+@-webkit-keyframes swing {
+    0% { -webkit-transform: rotate(0deg); }
+    25% { -webkit-transform: rotate(5deg); }
+    50% { -webkit-transform: rotate(0deg); }
+    75% { -webkit-transform: rotate(-5deg); }
+    100% { -webkit-transform: rotate(0deg); }
+}
+@-ms-keyframes swing {
+    0% { -ms-transform: rotate(0deg); }
+    25% { -ms-transform: rotate(5deg); }
+    50% { -ms-transform: rotate(0deg); }
+    75% { -ms-transform: rotate(-5deg); }
+    100% { -ms-transform: rotate(0deg); }
+}
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+hr {
+  font-family: Arial, sans-serif; /* choose the font you like */
+  text-align: center; /* horizontal centering */
+  line-height: 1px; /* vertical centering */
+  height: 1px; /* gap between the lines */
+  font-size: 1em; /* choose font size you like */
+  border-width: 1px 0; /* top and bottom borders */
+  border-style: solid;
+  border-color: #676767;
+  margin: 20px 400px; /* 20px space above/below, 10px left/right */
+  overflow: visible;
+
+  /* ensure 1px gap between borders */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+hr:after {
+  content: "🌟"; /* section sign */
+  display: inline; /* for vertical centering and background knockout */
+  padding: 0 0.5em; /* size of background color knockout */
+}
+
+/* opera doesn't render correctly. hide section sign */
+x:-o-prefocus, hr:after {
+  content: "";
+}
+
+
+
+/*
+*
+*
+*スクロール
+*
+*
+*/
+.box p {
+  -webkit-transition: all 1s;
+  -webkit-transform: translate(0, 0);
+  opacity: 1;
+}
+.box p.move {
+  -webkit-transform: translate(-500px, 0);
+  opacity: 0;
+}
+.box h2 {
+  -webkit-transition: all 1s;
+  -webkit-transform: translate(0, 0);
+  opacity: 1;
+}
+.box h2.move {
+  -webkit-transform: translate(-500px, 0);
+  opacity: 0;
+}
+.box ul {
+  -webkit-transition: all 1s;
+  -webkit-transform: translate(0, 0);
+  opacity: 1;
+}
+.box ul.move {
+  -webkit-transform: translate(-500px, 0);
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+.levitate-body:after {
+  content: '__________';
+  margin: 10px 0 0 0;
+  color: #a0c2ce;
+  -webkit-filter: blur(2px);
+}
+
+.logo {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  background-color: #a0c2ce;
+  text-align: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.levitate i {
+  color: #fff;
+  font: 700 50px Tahoma;
+  text-shadow: 0px 0px #819da6, 1px 1px #819da6, 2px 2px #819da6, 3px 3px #819da6, 4px 4px #819da6, 5px 5px #819da6, 6px 6px #819da6, 7px 7px #819da6, 8px 8px #819da6, 9px 9px #819da6, 10px 10px #819da6, 11px 11px #819da6, 12px 12px #819da6, 13px 13px #819da6, 14px 14px #819da6, 15px 15px #819da6, 16px 16px #819da6, 17px 17px #819da6, 18px 18px #819da6, 19px 19px #819da6, 20px 20px #819da6, 21px 21px #819da6, 22px 22px #819da6, 23px 23px #819da6, 24px 24px #819da6, 25px 25px #819da6, 26px 26px #819da6, 27px 27px #819da6, 28px 28px #819da6;
+}
+
+.levitate {
+  -webkit-animation-name: levitate;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out ease-in-out;
+}
+
+@-webkit-keyframes levitate {
+  from {
+    -webkit-transform: translate(0, 0px);
+  }
+  45% {
+    -webkit-transform: translate(0, 20px);
+  }
+  to {
+    -webkit-transform: translate(0, -0px);
+  }
+}
+
+
+
+/*
+*
+*
+* add header design
+*
+*/
+.sky {
+  width:100%;
+  background: #4B79A1;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #283E51, #0A2342);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #283E51, #0A2342); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -olinear-gradient(to top, #283E51, #0A2342); 
+  height: 100%;
+}
+/*
+.stars {
+  background:url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+}
+*/
+h3 {
+  font-family: 'Rammetto One';
+  text-align: center;
+  font-size: 1.0rem;
+  color: #fff;
+  width: 55%;
+  margin: 1rem auto;
+  line-height: 3rem;
+  letter-spacing: 5px;
+}
+
+/*****************************************
+Check out Nat's pen with animated SVG weather icons. 
+
+https://codepen.io/nsayenko/pen/JKzxdm/
+*******************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
