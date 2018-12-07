@@ -108,16 +108,6 @@ x:-o-prefocus, hr:after {
   opacity: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
 .levitate-body:after {
   content: '__________';
   margin: 10px 0 0 0;
@@ -201,7 +191,11 @@ https://codepen.io/nsayenko/pen/JKzxdm/
 
 
 
-
+.text_jp_p{
+  font-size:14px;
+  font-weight: bold;
+  text-align: left;
+}
 
 
 

@@ -49,13 +49,27 @@
               <a class="nav-link js-scroll-trigger" href="#education">Education</a>
             </li>
 
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+               案件
+              </a>
+              <div class="dropdown-menu">
+                
+                <a class="dropdown-item" href="#education">社内専用SNS作成</a>
+                <a class="dropdown-item" href="#education">rails api開発</a>
+                <a class="dropdown-item" href="#education">Slack Chatbot で効率化作成</a>
+                <a class="dropdown-item" href="#education">Railsアプリ プロジェクトマネジメント</a>
+                <a class="dropdown-item" href="#education">WordPress 用いた 企業サイト構築</a>
+                <a class="dropdown-item" href="#education">イベントサイトの Stripe 決済システムの導入と運営</a> 
+                
+              </div>
+            </li>
+
           </ul>
         </div>
       </div>
     </nav>
-
-
-
 
 
 
@@ -69,11 +83,6 @@
 </div>
 
 </header>
-
-
-
-
-
 
 <section id="experience" class="bg-light">
     <div class="container">
@@ -153,31 +162,1024 @@
 
 
 
-    <section id="about" class="box">
+<section id="about" class="box">
 
-                              <div class="container">
-                                <div class="row">
-                                  <div class="col-lg-8 mx-auto">
-                                    <h2>All About Me</h2>
+<div class="container">
+<div class="row">
+<div class="col-lg-8 mx-auto">
+<h2>【Rails - 社内専用SNS作成】</h2>
+<br>
 
-                                    <p class="lead">I am full stack engineer. I wanna contribute to the future of humanity using technology. Thank you for seeing my portfolio.  </p>
-                                    <ul>
+<p class="lead">■コンセプト</p>
+<p>社内コミュニケーション活性化のための、社内専用のSNSの構築を受託案件として請け負いました。いつでも「話せる」「相談できる」「意見を言える」「つながる分かち合える」をコンセプトとしたtwiiterとタスク管理サービスを統合したようなイメージです。ユーザー規模としては４０〜５０人程度の組織規模案件です。開発の設計から納品、その後の運用フルスタックで対応しました。機能実装を点で、特に意識した点と実装内容を記載いたします。簡単にチャットやツイートをすることが可能で、些細なことも意見としてアウトプットできる場所を環境を提供することをゴールに、APIとして公開も視野に入れたPC版の開発でした。</p>
+<br><br>
 
-                                      <li><a href="https://gitlab.com/users/Ryosuke-Hujisawa/projects">GitLab</a>
-                                      to stock a small experience</li>
 
-                                      <li><a href="https://github.com/ryosuke-hujisawa">GitHub</a> 
-                                      to stock a main personal projectp</li>
+<p class="lead">■設計・開発環境構築</p>
+<ul>
+<li>MVCアーキテクチャを採用しRailsを用いた開発環境の構</li>
+<li>運用環境にherokuを採用しデプロイ環境を構築</li>
+<li>Gitによるバージョン管理を導入</li>
+<li>GitのクライアントアプリとしてBitbucketを採用 GitFlowに従い開発を進行</li>
+</ul>
 
-<!--                                       <li>Learn more about my educational background</li>
-                                      
-                                      <li>Learn more about my work experience</li> -->
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
 
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-    </section>
+<p class="lead">■View設計</p>
+<ul>
+<li>ルーティングを設定し静的なページ遷移のViewを揃える</li>
+<li>テストの効率化のため、Guardによるテストの自動化を準備</li>
+<li>画像管理にAWSのS3を採用しRails本体に導入</li>
+<li>パーシャルを用いたソースのリファクタリング</li>
+</ul>
+
+<p class="lead">■DB設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+<li>オブジェクトの検索</li>
+<li>オブジェクトの更新</li>
+<li>有効性の認証と検証</li>
+<li>存在性の認証と検証</li>
+<li>フォーマットの認証と検証</li>
+<li>ハッシュ化されたパスワードの認証と検証</li>
+<li>モデルのバリデーション</li>
+<li>モデルの関連付け</li>
+</ul>
+
+<p class="lead">■アカウントの有効化</p>
+<ul>
+<li>証明: 期限切れの比較</li>
+<li>アカウント有効化のメール送信テンプレート</li>
+<li>アカウント有効化の送信メールのプレビュー</li>
+<li>アカウント有効化の送信メールのテスト</li>
+<li>アカウントの有効化する</li>
+<li>有効化のテストとリファクタリング</li>
+<li>本番環境でのメール送信</li>
+<li>本番環境でのメール送信 (再掲)</li>
+</ul>
+
+<p class="lead">■本番環境への運用</p>
+<ul>
+<li>本番環境でのSSL</li>
+<li>本番環境用のWebサーバー</li>
+<li>本番環境へのデプロイ</li>
+</ul>
+
+<p class="lead">■ログイン機構</p>
+<ul>
+<li>セッション</li>
+<li>ログインフォーム</li>
+<li>ユーザーの検索と認証</li>
+<li>フラッシュメッセージを表示する</li>
+<li>フラッシュのテスト</li>
+<li>ログイン</li>
+</ul>
+
+<p class="lead">■認可</p>
+<ul>
+<li>ユーザーにログインを要求する</li>
+<li>正しいユーザーを要求する</li>
+<li>サンプルのユーザー</li>
+</ul>
+
+
+<p class="lead">■パスワードの再設定</p>
+<ul>
+<li>PasswordResetsリソース</li>
+<li>PasswordResetsコントローラ</li>
+<li>新しいパスワードの設定</li>
+<li>パスワード再設定のメール送信</li>
+<li>パスワード再設定のメールとテンプレート</li>
+<li>送信メールのテスト</li>
+<li>パスワードを再設定する</li>
+<li>パスワードを更新する</li>
+<li>パスワードの再設定をテストする</li>
+<li>本番環境でのメール送信 (再掲)</li>
+</ul>
+
+
+<p class="lead">■ユーザーをフォローする</p>
+<ul>
+<li>データモデルの関連付け</li>
+<li>データモデルのバリデーション</li>
+<li>フォロー</li>
+<li>フォロワー</li>
+<li>フォローのサンプルデータ</li>
+<li>テストする</li>
+</ul>
+
+<p class="lead">■DB設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+
+</div>
+</div>
+</div>
+
+
+
+</section>
+
+
+<section id="services" class="bg-light">
+
+<div class="container">
+<div class="row">
+<div class="col-lg-8 mx-auto">
+<h2>【Stripe(Ruby) - 決済システムの開発・導入】</h2>
+<br>
+
+<p class="lead">■コンセプト</p>
+<p>Ruby and Railsで既に既存で開発・運営されていたシステムへ、新しく改修案件として決済システムと、管理画面の導入・開発・運営を請け負いました。CtoC型のイベント集客プラットフォームの決済処理の実装案件。</p>
+<br><br>
+
+
+<p class="lead">■設計・開発環境構築</p>
+<ul>
+<li>母体はRailsで、Rubyを採用しStripeで決済を実装</li>
+<li>運用環境にherokuで逐次heroku環境にpushしてく感じ</li>
+<li>Gitによるバージョン管理を導入</li>
+<li>GitのクライアントアプリとしてBitbucketを採用 GitFlowに従い開発を進行</li>
+</ul>
+
+<p class="lead">■Rails側のモデル</p>
+<ul>
+<li>User</li>
+<li>Team</li>
+<li>Plan</li>
+<li>Invoice</li>
+</ul>
+
+<p class="lead">■Stripe側のモデル</p>
+<ul>
+<li>Stripe::Plan 決済周期（monthly）や金額、通貨、税額（消費税・付加価値税）など</li>
+<li>Stripe::Token</li>
+<li>Stripe::Card</li>
+<li>Stripe::Subscription</li>
+<li>Stripe::Customerのプラン状況や次の決済日などの情報を持つ</li>
+<li>Stripe::CustomerとStripe::Planに紐づく</li>
+<li>Stripe::Invoice</li>
+</ul>
+
+<p class="lead">■主な機能一覧</p>
+<ul>
+<li>最初の決済日の設定</li>
+<li>有料プランに変更する</li>
+<li>設計・開発環境構築</li>
+<li>ホストユーザーイベント設定</li>
+<li>ゲストユーザーイベント購入</li>
+<li>ゲストユーザー定期購読</li>
+<li>ゲストユーザーイベントキャンセル</li>
+<li>ゲストユーザー定期購読解除</li>
+<li>領収書発行・管理</li>
+<li>1回限りの決済</li>
+<li>サブスクリプション型決済</li>
+<li>クレジットカード情報の保持（不可逆トークン化）</li>
+<li>クーポンコード（割引）の発行・適用</li>
+<li>複数通貨対応・通貨変換</li>
+</ul>
+
+<p class="lead">■アカウントの有効化</p>
+<ul>
+</ul>
+
+<p class="lead">■本番環境への運用</p>
+<ul>
+</ul>
+
+<p class="lead">■ログイン機構</p>
+<ul>
+</ul>
+
+<p class="lead">■認可</p>
+<ul>
+</ul>
+
+
+<p class="lead">■パスワードの再設定</p>
+<ul>
+</ul>
+
+
+<p class="lead">■ユーザーをフォローする</p>
+<ul>
+</ul>
+
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="about" class="box">
+
+<div class="container">
+<div class="row">
+<div class="col-lg-8 mx-auto">
+<h2>【社内受付アプリの開発】</h2>
+<br>
+
+<p class="lead">イベント開催プラットフォームの案件に携わりました</p>
+
+<p class="lead">■設計・開発環境構築</p>
+<ul>
+<li>MVCアーキテクチャを採用しRailsを用いた開発環境の構</li>
+<li>運用環境にherokuを採用しデプロイ環境を構築</li>
+<li>Gitによるバージョン管理を導入</li>
+<li>GitのクライアントアプリとしてBitbucketを採用 GitFlowに従い開発を進行</li>
+</ul>
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+<p class="lead">■View設計</p>
+<ul>
+<li>ルーティングを設定し静的なページ遷移のViewを揃える</li>
+<li>テストの効率化のため、Guardによるテストの自動化を準備</li>
+<li>画像管理にAWSのS3を採用しRails本体に導入</li>
+<li>パーシャルを用いたソースのリファクタリング</li>
+</ul>
+
+<p class="lead">■DB設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+<li>オブジェクトの検索</li>
+<li>オブジェクトの更新</li>
+<li>有効性の認証と検証</li>
+<li>存在性の認証と検証</li>
+<li>フォーマットの認証と検証</li>
+<li>ハッシュ化されたパスワードの認証と検証</li>
+<li>モデルのバリデーション</li>
+<li>モデルの関連付け</li>
+</ul>
+
+<p class="lead">■アカウントの有効化</p>
+<ul>
+<li>証明: 期限切れの比較</li>
+<li>アカウント有効化のメール送信テンプレート</li>
+<li>アカウント有効化の送信メールのプレビュー</li>
+<li>アカウント有効化の送信メールのテスト</li>
+<li>アカウントの有効化する</li>
+<li>有効化のテストとリファクタリング</li>
+<li>本番環境でのメール送信</li>
+<li>本番環境でのメール送信 (再掲)</li>
+</ul>
+
+<p class="lead">■本番環境への運用</p>
+<ul>
+<li>本番環境でのSSL</li>
+<li>本番環境用のWebサーバー</li>
+<li>本番環境へのデプロイ</li>
+</ul>
+
+<p class="lead">■ログイン機構</p>
+<ul>
+<li>セッション</li>
+<li>ログインフォーム</li>
+<li>ユーザーの検索と認証</li>
+<li>フラッシュメッセージを表示する</li>
+<li>フラッシュのテスト</li>
+<li>ログイン</li>
+</ul>
+
+<p class="lead">■認可</p>
+<ul>
+<li>ユーザーにログインを要求する</li>
+<li>正しいユーザーを要求する</li>
+<li>サンプルのユーザー</li>
+</ul>
+
+
+<p class="lead">■パスワードの再設定</p>
+<ul>
+<li>PasswordResetsリソース</li>
+<li>PasswordResetsコントローラ</li>
+<li>新しいパスワードの設定</li>
+<li>パスワード再設定のメール送信</li>
+<li>パスワード再設定のメールとテンプレート</li>
+<li>送信メールのテスト</li>
+<li>パスワードを再設定する</li>
+<li>パスワードを更新する</li>
+<li>パスワードの再設定をテストする</li>
+<li>本番環境でのメール送信 (再掲)</li>
+</ul>
+
+
+<p class="lead">■ユーザーをフォローする</p>
+<ul>
+<li>データモデルの関連付け</li>
+<li>データモデルのバリデーション</li>
+<li>フォロー</li>
+<li>フォロワー</li>
+<li>フォローのサンプルデータ</li>
+<li>テストする</li>
+</ul>
+
+<p class="lead">■DB設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+
+</div>
+</div>
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="services" class="bg-light">
+
+<div class="container">
+<div class="row">
+<div class="col-lg-8 mx-auto">
+<h2>【Slack, ChatBot, ボット開発、運営】</h2>
+<br>
+
+<p class="lead">社内コミュニケーション活性化のための、専用の社内SNS構築、受託案件、開発の設計から納品、その後の運用フルスタックで対応しました</p>
+
+<p class="lead">■設計・開発環境構築</p>
+<ul>
+<li>MVCアーキテクチャを採用しRailsを用いた開発環境の構</li>
+<li>運用環境にherokuを採用しデプロイ環境を構築</li>
+<li>Gitによるバージョン管理を導入</li>
+<li>GitのクライアントアプリとしてBitbucketを採用 GitFlowに従い開発を進行</li>
+</ul>
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+<p class="lead">■View設計</p>
+<ul>
+<li>ルーティングを設定し静的なページ遷移のViewを揃える</li>
+<li>テストの効率化のため、Guardによるテストの自動化を準備</li>
+<li>画像管理にAWSのS3を採用しRails本体に導入</li>
+<li>パーシャルを用いたソースのリファクタリング</li>
+</ul>
+
+<p class="lead">■DB設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+<li>オブジェクトの検索</li>
+<li>オブジェクトの更新</li>
+<li>有効性の認証と検証</li>
+<li>存在性の認証と検証</li>
+<li>フォーマットの認証と検証</li>
+<li>ハッシュ化されたパスワードの認証と検証</li>
+<li>モデルのバリデーション</li>
+<li>モデルの関連付け</li>
+</ul>
+
+<p class="lead">■アカウントの有効化</p>
+<ul>
+<li>証明: 期限切れの比較</li>
+<li>アカウント有効化のメール送信テンプレート</li>
+<li>アカウント有効化の送信メールのプレビュー</li>
+<li>アカウント有効化の送信メールのテスト</li>
+<li>アカウントの有効化する</li>
+<li>有効化のテストとリファクタリング</li>
+<li>本番環境でのメール送信</li>
+<li>本番環境でのメール送信 (再掲)</li>
+</ul>
+
+<p class="lead">■本番環境への運用</p>
+<ul>
+<li>本番環境でのSSL</li>
+<li>本番環境用のWebサーバー</li>
+<li>本番環境へのデプロイ</li>
+</ul>
+
+<p class="lead">■ログイン機構</p>
+<ul>
+<li>セッション</li>
+<li>ログインフォーム</li>
+<li>ユーザーの検索と認証</li>
+<li>フラッシュメッセージを表示する</li>
+<li>フラッシュのテスト</li>
+<li>ログイン</li>
+</ul>
+
+<p class="lead">■認可</p>
+<ul>
+<li>ユーザーにログインを要求する</li>
+<li>正しいユーザーを要求する</li>
+<li>サンプルのユーザー</li>
+</ul>
+
+
+<p class="lead">■パスワードの再設定</p>
+<ul>
+<li>PasswordResetsリソース</li>
+<li>PasswordResetsコントローラ</li>
+<li>新しいパスワードの設定</li>
+<li>パスワード再設定のメール送信</li>
+<li>パスワード再設定のメールとテンプレート</li>
+<li>送信メールのテスト</li>
+<li>パスワードを再設定する</li>
+<li>パスワードを更新する</li>
+<li>パスワードの再設定をテストする</li>
+<li>本番環境でのメール送信 (再掲)</li>
+</ul>
+
+
+<p class="lead">■ユーザーをフォローする</p>
+<ul>
+<li>データモデルの関連付け</li>
+<li>データモデルのバリデーション</li>
+<li>フォロー</li>
+<li>フォロワー</li>
+<li>フォローのサンプルデータ</li>
+<li>テストする</li>
+</ul>
+
+<p class="lead">■DB設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="about" class="box">
+
+<div class="container">
+<div class="row">
+<div class="col-lg-8 mx-auto">
+<h2>【webAPI開発と、運営】</h2>
+<br>
+
+<p class="lead">イベント開催プラットフォームの案件に携わりました</p>
+
+<p class="lead">■設計・開発環境構築</p>
+<ul>
+<li>MVCアーキテクチャを採用しRailsを用いた開発環境の構</li>
+<li>運用環境にherokuを採用しデプロイ環境を構築</li>
+<li>Gitによるバージョン管理を導入</li>
+<li>GitのクライアントアプリとしてBitbucketを採用 GitFlowに従い開発を進行</li>
+</ul>
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+<p class="lead">■View設計</p>
+<ul>
+<li>ルーティングを設定し静的なページ遷移のViewを揃える</li>
+<li>テストの効率化のため、Guardによるテストの自動化を準備</li>
+<li>画像管理にAWSのS3を採用しRails本体に導入</li>
+<li>パーシャルを用いたソースのリファクタリング</li>
+</ul>
+
+<p class="lead">■DB設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+<li>オブジェクトの検索</li>
+<li>オブジェクトの更新</li>
+<li>有効性の認証と検証</li>
+<li>存在性の認証と検証</li>
+<li>フォーマットの認証と検証</li>
+<li>ハッシュ化されたパスワードの認証と検証</li>
+<li>モデルのバリデーション</li>
+<li>モデルの関連付け</li>
+</ul>
+
+<p class="lead">■アカウントの有効化</p>
+<ul>
+<li>証明: 期限切れの比較</li>
+<li>アカウント有効化のメール送信テンプレート</li>
+<li>アカウント有効化の送信メールのプレビュー</li>
+<li>アカウント有効化の送信メールのテスト</li>
+<li>アカウントの有効化する</li>
+<li>有効化のテストとリファクタリング</li>
+<li>本番環境でのメール送信</li>
+<li>本番環境でのメール送信 (再掲)</li>
+</ul>
+
+<p class="lead">■本番環境への運用</p>
+<ul>
+<li>本番環境でのSSL</li>
+<li>本番環境用のWebサーバー</li>
+<li>本番環境へのデプロイ</li>
+</ul>
+
+<p class="lead">■ログイン機構</p>
+<ul>
+<li>セッション</li>
+<li>ログインフォーム</li>
+<li>ユーザーの検索と認証</li>
+<li>フラッシュメッセージを表示する</li>
+<li>フラッシュのテスト</li>
+<li>ログイン</li>
+</ul>
+
+<p class="lead">■認可</p>
+<ul>
+<li>ユーザーにログインを要求する</li>
+<li>正しいユーザーを要求する</li>
+<li>サンプルのユーザー</li>
+</ul>
+
+
+<p class="lead">■パスワードの再設定</p>
+<ul>
+<li>PasswordResetsリソース</li>
+<li>PasswordResetsコントローラ</li>
+<li>新しいパスワードの設定</li>
+<li>パスワード再設定のメール送信</li>
+<li>パスワード再設定のメールとテンプレート</li>
+<li>送信メールのテスト</li>
+<li>パスワードを再設定する</li>
+<li>パスワードを更新する</li>
+<li>パスワードの再設定をテストする</li>
+<li>本番環境でのメール送信 (再掲)</li>
+</ul>
+
+
+<p class="lead">■ユーザーをフォローする</p>
+<ul>
+<li>データモデルの関連付け</li>
+<li>データモデルのバリデーション</li>
+<li>フォロー</li>
+<li>フォロワー</li>
+<li>フォローのサンプルデータ</li>
+<li>テストする</li>
+</ul>
+
+<p class="lead">■DB設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+
+</div>
+</div>
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="services" class="bg-light">
+
+<div class="container">
+<div class="row">
+<div class="col-lg-8 mx-auto">
+<h2>【Slack, ChatBot, ボット開発、運営】</h2>
+<br>
+
+<p class="lead">社内コミュニケーション活性化のための、専用の社内SNS構築、受託案件、開発の設計から納品、その後の運用フルスタックで対応しました</p>
+
+<p class="lead">■設計・開発環境構築</p>
+<ul>
+<li>MVCアーキテクチャを採用しRailsを用いた開発環境の構</li>
+<li>運用環境にherokuを採用しデプロイ環境を構築</li>
+<li>Gitによるバージョン管理を導入</li>
+<li>GitのクライアントアプリとしてBitbucketを採用 GitFlowに従い開発を進行</li>
+</ul>
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+<p class="lead">■View設計</p>
+<ul>
+<li>ルーティングを設定し静的なページ遷移のViewを揃える</li>
+<li>テストの効率化のため、Guardによるテストの自動化を準備</li>
+<li>画像管理にAWSのS3を採用しRails本体に導入</li>
+<li>パーシャルを用いたソースのリファクタリング</li>
+</ul>
+
+<p class="lead">■DB設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+<li>オブジェクトの検索</li>
+<li>オブジェクトの更新</li>
+<li>有効性の認証と検証</li>
+<li>存在性の認証と検証</li>
+<li>フォーマットの認証と検証</li>
+<li>ハッシュ化されたパスワードの認証と検証</li>
+<li>モデルのバリデーション</li>
+<li>モデルの関連付け</li>
+</ul>
+
+<p class="lead">■アカウントの有効化</p>
+<ul>
+<li>証明: 期限切れの比較</li>
+<li>アカウント有効化のメール送信テンプレート</li>
+<li>アカウント有効化の送信メールのプレビュー</li>
+<li>アカウント有効化の送信メールのテスト</li>
+<li>アカウントの有効化する</li>
+<li>有効化のテストとリファクタリング</li>
+<li>本番環境でのメール送信</li>
+<li>本番環境でのメール送信 (再掲)</li>
+</ul>
+
+<p class="lead">■本番環境への運用</p>
+<ul>
+<li>本番環境でのSSL</li>
+<li>本番環境用のWebサーバー</li>
+<li>本番環境へのデプロイ</li>
+</ul>
+
+<p class="lead">■ログイン機構</p>
+<ul>
+<li>セッション</li>
+<li>ログインフォーム</li>
+<li>ユーザーの検索と認証</li>
+<li>フラッシュメッセージを表示する</li>
+<li>フラッシュのテスト</li>
+<li>ログイン</li>
+</ul>
+
+<p class="lead">■認可</p>
+<ul>
+<li>ユーザーにログインを要求する</li>
+<li>正しいユーザーを要求する</li>
+<li>サンプルのユーザー</li>
+</ul>
+
+
+<p class="lead">■パスワードの再設定</p>
+<ul>
+<li>PasswordResetsリソース</li>
+<li>PasswordResetsコントローラ</li>
+<li>新しいパスワードの設定</li>
+<li>パスワード再設定のメール送信</li>
+<li>パスワード再設定のメールとテンプレート</li>
+<li>送信メールのテスト</li>
+<li>パスワードを再設定する</li>
+<li>パスワードを更新する</li>
+<li>パスワードの再設定をテストする</li>
+<li>本番環境でのメール送信 (再掲)</li>
+</ul>
+
+
+<p class="lead">■ユーザーをフォローする</p>
+<ul>
+<li>データモデルの関連付け</li>
+<li>データモデルのバリデーション</li>
+<li>フォロー</li>
+<li>フォロワー</li>
+<li>フォローのサンプルデータ</li>
+<li>テストする</li>
+</ul>
+
+<p class="lead">■DB設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="about" class="box">
+
+<div class="container">
+<div class="row">
+<div class="col-lg-8 mx-auto">
+<h2>【webAPI開発と、運営】</h2>
+<br>
+
+<p class="lead">イベント開催プラットフォームの案件に携わりました</p>
+
+<p class="lead">■設計・開発環境構築</p>
+<ul>
+<li>開発環境  LAMP</li>
+<li>言語  PHP / Javascript</li>
+<li>OS  CentOS</li>
+<li>GDB MySQL( PostgreSQL )</li>
+<li>フレームワーク cakephp / bootstrap / AngularJS</li>
+<li>オープンソース WordPress / EC-CUBE</li>
+</ul>
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+<p class="lead">■View設計</p>
+<ul>
+<li>ルーティングを設定し静的なページ遷移のViewを揃える</li>
+<li>テストの効率化のため、Guardによるテストの自動化を準備</li>
+<li>画像管理にAWSのS3を採用しRails本体に導入</li>
+<li>パーシャルを用いたソースのリファクタリング</li>
+</ul>
+
+<p class="lead">■DB設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+<li>オブジェクトの検索</li>
+<li>オブジェクトの更新</li>
+<li>有効性の認証と検証</li>
+<li>存在性の認証と検証</li>
+<li>フォーマットの認証と検証</li>
+<li>ハッシュ化されたパスワードの認証と検証</li>
+<li>モデルのバリデーション</li>
+<li>モデルの関連付け</li>
+</ul>
+
+<p class="lead">■アカウントの有効化</p>
+<ul>
+<li>証明: 期限切れの比較</li>
+<li>アカウント有効化のメール送信テンプレート</li>
+<li>アカウント有効化の送信メールのプレビュー</li>
+<li>アカウント有効化の送信メールのテスト</li>
+<li>アカウントの有効化する</li>
+<li>有効化のテストとリファクタリング</li>
+<li>本番環境でのメール送信</li>
+<li>本番環境でのメール送信 (再掲)</li>
+</ul>
+
+<p class="lead">■本番環境への運用</p>
+<ul>
+<li>本番環境でのSSL</li>
+<li>本番環境用のWebサーバー</li>
+<li>本番環境へのデプロイ</li>
+</ul>
+
+<p class="lead">■ログイン機構</p>
+<ul>
+<li>セッション</li>
+<li>ログインフォーム</li>
+<li>ユーザーの検索と認証</li>
+<li>フラッシュメッセージを表示する</li>
+<li>フラッシュのテスト</li>
+<li>ログイン</li>
+</ul>
+
+<p class="lead">■認可</p>
+<ul>
+<li>ユーザーにログインを要求する</li>
+<li>正しいユーザーを要求する</li>
+<li>サンプルのユーザー</li>
+</ul>
+
+
+<p class="lead">■パスワードの再設定</p>
+<ul>
+<li>PasswordResetsリソース</li>
+<li>PasswordResetsコントローラ</li>
+<li>新しいパスワードの設定</li>
+<li>パスワード再設定のメール送信</li>
+<li>パスワード再設定のメールとテンプレート</li>
+<li>送信メールのテスト</li>
+<li>パスワードを再設定する</li>
+<li>パスワードを更新する</li>
+<li>パスワードの再設定をテストする</li>
+<li>本番環境でのメール送信 (再掲)</li>
+</ul>
+
+
+<p class="lead">■ユーザーをフォローする</p>
+<ul>
+<li>データモデルの関連付け</li>
+<li>データモデルのバリデーション</li>
+<li>フォロー</li>
+<li>フォロワー</li>
+<li>フォローのサンプルデータ</li>
+<li>テストする</li>
+</ul>
+
+<p class="lead">■DB設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+<p class="lead">■View設計</p>
+<ul>
+<li>オブジェクトの作成</li>
+<li>オブジェクトの編集</li>
+</ul>
+
+
+
+</div>
+</div>
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <section id="services" class="bg-light">
       <div class="container">
